@@ -4,6 +4,9 @@
     <Filter Include="Potato">
       <UniqueIdentifier>{FC9E95CA-E840-C0A0-D1FB-D3F4BD3C47F1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Potato\Events">
+      <UniqueIdentifier>{60179B6E-CCD7-16A5-9512-602201925B81}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Potato.h" />
@@ -16,9 +19,22 @@
     <ClInclude Include="src\Potato\EntryPoint.h">
       <Filter>Potato</Filter>
     </ClInclude>
+    <ClInclude Include="src\Potato\Events\ApplicationEvent.h">
+      <Filter>Potato\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Potato\Events\Event.h">
+      <Filter>Potato\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Potato\Events\KeyEvent.h">
+      <Filter>Potato\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Potato\Events\MouseEvent.h">
+      <Filter>Potato\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Potato\Log.h">
       <Filter>Potato</Filter>
     </ClInclude>
+    <ClInclude Include="src\popch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Potato\Application.cpp">
@@ -27,5 +43,6 @@
     <ClCompile Include="src\Potato\Log.cpp">
       <Filter>Potato</Filter>
     </ClCompile>
+    <ClCompile Include="src\popch.cpp" />
   </ItemGroup>
 </Project>
