@@ -24,7 +24,7 @@ namespace Potato {
 		None = 0,
 		EventCategoryApplication   = BIT(0),
 		EventCategoryInput         = BIT(1),
-		EventCategorykeyboard      = BIT(2),
+		EventCategoryKeyboard      = BIT(2),
 		EventCategoryMouse         = BIT(3),
 		EventCategoryMouseButton   = BIT(4)
 	};
@@ -39,6 +39,9 @@ namespace Potato {
 	{
 		friend class EventDispatcher;
 	public:
+		
+		bool Handled = false;
+
 		virtual EventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0;
 		virtual int GetCategoryFlags() const = 0;
@@ -48,8 +51,6 @@ namespace Potato {
 		{
 			return GetCategoryFlags() & category;
 		}
-	protected:
-		bool m_Handled = false;
 	};
 
 	class EventDispatcher
@@ -67,7 +68,7 @@ namespace Potato {
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
-				m_Event.m_Handled = func(*(T*)&m_Event);
+				m_Event.Handled = func(*(T*)&m_Event);
 				return true;
 			}
 			return false;

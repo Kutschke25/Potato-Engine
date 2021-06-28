@@ -16,7 +16,7 @@ namespace Potato {
 			std::string ToString() const override
 			{
 				std::stringstream ss;
-				ss << "MouseMovedEvent " << m_Moved << ", " << m_MouseY;
+				ss << "MouseMovedEvent " << m_MouseX << ", " << m_MouseY;
 				return ss.str();
 			}
 
@@ -33,7 +33,7 @@ namespace Potato {
 			: m_XOffset(xOffset), m_YOffset(yOffset) {}
 
 		inline float GetXOffset() const { return m_XOffset; }
-		inline float GetYOffset() const { return m_Yoffset; }
+		inline float GetYOffset() const { return m_YOffset; }
 
 		std::string ToString() const override
 		{
@@ -70,7 +70,7 @@ namespace Potato {
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss < , "MouseButtonPressedEvent: " << m_Button;
+			ss << "MouseButtonPressedEvent: " << m_Button;
 			return ss.str();
 		}
 

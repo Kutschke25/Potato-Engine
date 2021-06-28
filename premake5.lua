@@ -11,6 +11,12 @@ workspace "Potato"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Potato/vendor/GLFW/include"
+
+include "Potato/vendor/GLFW"
+
 project "Potato"
 	location "Potato"
 	kind "SharedLib"
@@ -31,7 +37,14 @@ project "Potato"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -53,14 +66,17 @@ project "Potato"
 	filter "configurations:Debug"
 		defines "PO_DEBUG"
 		symbols "On"
+		buildoptions "/MDd"
 
 	filter "configurations:Release"
 		defines "PO_RELEASE"
 		optimize "On"
+		buildoptions "/MD"
 
 	filter "configurations:Dist"
 		defines "PO_DIST"
 		optimize "On"
+		buildoptions "/MD"
 
 project "Sandbox"
 	location "Sandbox"
@@ -100,11 +116,14 @@ project "Sandbox"
 	filter "configurations:Debug"
 		defines "PO_DEBUG"
 		symbols "On"
+		buildoptions "/MDd"
 
 	filter "configurations:Release"
 		defines "PO_RELEASE"
 		optimize "On"
+		buildoptions "/MD"
 
 	filter "configurations:Dist"
 		defines "PO_DIST"
 		optimize "On"
+		buildoptions "/MD"

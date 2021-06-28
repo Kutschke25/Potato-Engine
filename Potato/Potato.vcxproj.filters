@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Potato">
       <UniqueIdentifier>{FC9E95CA-E840-C0A0-D1FB-D3F4BD3C47F1}</UniqueIdentifier>
     </Filter>
@@ -9,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Potato.h" />
     <ClInclude Include="src\Potato\Application.h">
       <Filter>Potato</Filter>
@@ -31,13 +40,31 @@
     <ClInclude Include="src\Potato\Events\MouseEvent.h">
       <Filter>Potato\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Potato\Layer.h">
+      <Filter>Potato</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Potato\LayerStack.h">
+      <Filter>Potato</Filter>
+    </ClInclude>
     <ClInclude Include="src\Potato\Log.h">
+      <Filter>Potato</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Potato\Window.h">
       <Filter>Potato</Filter>
     </ClInclude>
     <ClInclude Include="src\popch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Potato\Application.cpp">
+      <Filter>Potato</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Potato\Layer.cpp">
+      <Filter>Potato</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Potato\LayerStack.cpp">
       <Filter>Potato</Filter>
     </ClCompile>
     <ClCompile Include="src\Potato\Log.cpp">
