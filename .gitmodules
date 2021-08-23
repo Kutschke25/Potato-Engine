@@ -4,3 +4,6 @@
 [submodule "Potato/vendor/GLFW"]
 	path = Potato/vendor/GLFW
 	url = https://github.com/Kutschke25/glfw
+[submodule "Potato/vendor/imgui"]
+	path = Potato/vendor/imgui
+	url = https://github.com/Kutschke25/imgui
