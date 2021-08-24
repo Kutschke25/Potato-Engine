@@ -7,6 +7,8 @@
 #include "Potato\Layer.h"
 #include "Potato\Log.h"
 
+#include "Potato\ImGui\ImGuiLayer.h"
+
 //Entry Point--------------------------------------------
 #include "Potato\EntryPoint.h"
 //Entry Point--------------------------------------------

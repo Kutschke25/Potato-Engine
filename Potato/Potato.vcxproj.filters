@@ -53,6 +53,8 @@
       <Filter>Potato</Filter>
     </ClInclude>
     <ClInclude Include="src\popch.h" />
+    <ClInclude Include="src\Potato\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGlRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
@@ -71,5 +73,7 @@
       <Filter>Potato</Filter>
     </ClCompile>
     <ClCompile Include="src\popch.cpp" />
+    <ClCompile Include="src\Potato\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGlRenderer.cpp" />
   </ItemGroup>
 </Project>
