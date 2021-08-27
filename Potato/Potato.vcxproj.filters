@@ -4,6 +4,9 @@
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
     </Filter>
@@ -13,8 +16,14 @@
     <Filter Include="Potato\Events">
       <UniqueIdentifier>{60179B6E-CCD7-16A5-9512-602201925B81}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Potato\ImGui">
+      <UniqueIdentifier>{26613051-12C4-BFF5-BB49-F8ABA78B8B78}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGlRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
@@ -40,6 +49,9 @@
     <ClInclude Include="src\Potato\Events\MouseEvent.h">
       <Filter>Potato\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Potato\ImGui\ImGuiLayer.h">
+      <Filter>Potato\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Potato\Layer.h">
       <Filter>Potato</Filter>
     </ClInclude>
@@ -53,15 +65,19 @@
       <Filter>Potato</Filter>
     </ClInclude>
     <ClInclude Include="src\popch.h" />
-    <ClInclude Include="src\Potato\ImGui\ImGuiLayer.h" />
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGlRenderer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGlRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Potato\Application.cpp">
       <Filter>Potato</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Potato\ImGui\ImGuiLayer.cpp">
+      <Filter>Potato\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Potato\Layer.cpp">
       <Filter>Potato</Filter>
@@ -73,7 +89,5 @@
       <Filter>Potato</Filter>
     </ClCompile>
     <ClCompile Include="src\popch.cpp" />
-    <ClCompile Include="src\Potato\ImGui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGlRenderer.cpp" />
   </ItemGroup>
 </Project>

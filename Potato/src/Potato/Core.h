@@ -10,6 +10,10 @@
 	#error Potato only supports Windows!
 #endif
 
+#ifdef PO_DEBUG
+	#define PO_ENABLE_ASSERTS
+#endif
+
 #ifdef PO_ENABLE_ASSERTS
 	#define PO_ASSERT(x, ...)  {if (!(x)) {PO_ERROR("Assertion failed: {0}", __VA_ARGS__}; __debugbreak(); } }
 	#define PO_CORE_ASSERT(x, ...) {if (!(x)) {PO_CORE_ERROR("Assertion failed: {0}", __VA_ARGS__); __debugbreak(); } }
