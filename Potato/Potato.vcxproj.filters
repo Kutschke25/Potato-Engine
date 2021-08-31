@@ -65,6 +65,8 @@
       <Filter>Potato</Filter>
     </ClInclude>
     <ClInclude Include="src\popch.h" />
+    <ClInclude Include="src\Potato\Input.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGlRenderer.cpp">
@@ -89,5 +91,6 @@
       <Filter>Potato</Filter>
     </ClCompile>
     <ClCompile Include="src\popch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>

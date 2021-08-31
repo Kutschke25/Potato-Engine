@@ -4,6 +4,7 @@
 // For use by Potato application
 
 #include "Potato\Application.h"
+#include "Potato\Input.h"
 #include "Potato\Layer.h"
 #include "Potato\Log.h"
 

@@ -1,5 +1,6 @@
 workspace "Potato"
 	architecture "x64"
+	startproject "Sandbox"
 
 	configurations
 	{
@@ -17,12 +18,12 @@ IncludeDir["GLFW"] = "Potato/vendor/GLFW/include"
 IncludeDir["Glad"] = "Potato/vendor/Glad/include"
 IncludeDir["ImGui"] = "Potato/vendor/imgui"
 
-include "Potato/vendor/GLFW"
-include "Potato/vendor/Glad"
-include "Potato/vendor/imgui"
-
-
-
+group "Dependencies"
+	include "Potato/vendor/GLFW"
+	include "Potato/vendor/Glad"
+	include "Potato/vendor/imgui"
+group ""
+	
 project "Potato"
 	location "Potato"
 	kind "SharedLib"
@@ -71,7 +72,7 @@ project "Potato"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 
 	filter "configurations:Debug"

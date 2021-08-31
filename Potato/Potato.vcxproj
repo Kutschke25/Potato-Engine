@@ -94,7 +94,7 @@
       <ImportLibrary>..\bin\Debug-windows-x86_64\Potato\Potato.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Potato\Potato.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Potato\Potato.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Potato\Potato.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Potato\Potato.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Potato\Potato.dll "..\bin\Debug-windows-x86_64\Sandbox\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Potato\Potato.dll "..\bin\Debug-windows-x86_64\Sandbox\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -121,7 +121,7 @@
       <ImportLibrary>..\bin\Release-windows-x86_64\Potato\Potato.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-windows-x86_64\Potato\Potato.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Potato\Potato.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Potato\Potato.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Release-windows-x86_64\Potato\Potato.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Potato\Potato.dll "..\bin\Release-windows-x86_64\Sandbox\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Potato\Potato.dll "..\bin\Release-windows-x86_64\Sandbox\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -148,11 +148,12 @@
       <ImportLibrary>..\bin\Dist-windows-x86_64\Potato\Potato.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Potato\Potato.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Potato\Potato.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Potato\Potato.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Potato\Potato.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Potato\Potato.dll "..\bin\Dist-windows-x86_64\Sandbox\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Potato\Potato.dll "..\bin\Dist-windows-x86_64\Sandbox\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGlRenderer.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Potato.h" />
     <ClInclude Include="src\Potato\Application.h" />
@@ -163,6 +164,7 @@
     <ClInclude Include="src\Potato\Events\KeyEvent.h" />
     <ClInclude Include="src\Potato\Events\MouseEvent.h" />
     <ClInclude Include="src\Potato\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Potato\Input.h" />
     <ClInclude Include="src\Potato\Layer.h" />
     <ClInclude Include="src\Potato\LayerStack.h" />
     <ClInclude Include="src\Potato\Log.h" />
@@ -171,6 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGlRenderer.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Potato\Application.cpp" />
     <ClCompile Include="src\Potato\ImGui\ImGuiLayer.cpp" />
